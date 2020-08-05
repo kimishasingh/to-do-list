@@ -1,0 +1,12 @@
+<h2>My todo list</h2>
+<ul>
+  <li *ngFor="let todo of todos">
+    <input
+      type="checkbox"
+      [checked]="todo.isCompleted"
+      (change)="markAsChecked(todo)"
+    />
+    {{ todo.title }}
+  </li>
+</ul>
+<button [routerLink]="['/']" skipLocationChange>Back</button>
